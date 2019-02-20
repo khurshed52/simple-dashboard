@@ -1,0 +1,107 @@
+
+* {
+  box-sizing: border-box;
+}
+
+#toggle {
+  display: none;
+}
+
+.toggleButton {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  width: 150px;
+  line-height: 50px;
+  padding-top: 10px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background: #123;
+  cursor: pointer;
+  -webkit-transform: translateX(-54px) translateY(-7px) rotate(-45deg);
+          transform: translateX(-54px) translateY(-7px) rotate(-45deg);
+}
+.toggleButton:hover {
+  background: #234;
+}
+
+#toggle:checked + .toggleButton {
+  background: #234;
+}
+
+#toggle:checked + .toggleButton + #sidebar {
+  left: 0;
+}
+
+#toggle:checked + .toggleButton + #sidebar + #page {
+  padding-left: 100px;
+}
+
+#sidebar {
+  z-index: 1;
+  width: 190px;
+  left: -190px;
+  position: absolute;
+  top:0;
+  border-left: 10px solid #213c54;
+  background: #123;
+  height: 100%;
+  overflow: hidden;
+  transition: left 200ms linear;
+  overflow-y: auto;
+}
+
+#nav {
+  margin-top: 13px;
+  text-align: center;
+}
+
+nav img {
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+#nav a {
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #1d3042;
+}
+#nav a:hover {
+  color: #fff;
+  background: #234;
+}
+
+#page {
+  z-index: 0;
+  padding-left: 0;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: padding-left 200ms linear;
+  padding: 10px;
+}
+
+
+.content {
+  padding: 20px;
+  min-height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  #sidebar {
+    left: 0 !important;
+  }
+
+  #page {
+    padding-left: 197px !important;
+  }
+
+  .toggleButton {
+    display: none !important;
+  }
+}

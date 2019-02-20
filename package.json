@@ -1,0 +1,22 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "admin dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "khurshed",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "css-ripple-effect": "^1.0.5",
+    "feather-icons": "^4.7.3",
+    "izimodal": "^1.5.1",
+    "jquery": "^3.3.1",
+    "khuri-common-css": "^1.0.6",
+    "normalize.css": "^8.0.0",
+    "reset-css": "^4.0.1",
+    "simplebar": "^3.1.1"
+  }
+}
